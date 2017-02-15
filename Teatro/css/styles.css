@@ -1,0 +1,125 @@
+
+/*----------------------------
+	CSS3 Animated Navigation
+-----------------------------*/
+
+
+.fancyNav{
+	/* Affects the UL element */
+	overflow: hidden;
+	display: inline-block;
+    width:960px;
+    background-color:#000;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.fancyNav li{
+	background-color: #000;
+	border-right: 1px solid #808080;
+	float: left;
+	list-style: none;
+}
+
+.fancyNav li:after{
+
+content:'.';
+	text-indent:-100px;
+	overflow:hidden;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	opacity:0;
+}
+.fancyNav li:last-child{
+	border-radius: 4px 4px 4px 4px;
+}
+.fancyNav li:hover:after,
+.fancyNav li.selected:after,
+.fancyNav li:target:after{
+	/* This property triggers the CSS3 transition */
+	opacity:5;
+}
+
+.fancyNav:hover li.selected:after,
+.fancyNav:hover li:target:after{
+	/* Hides the targeted li when we are hovering on the UL */
+	opacity:5;
+    
+}
+
+.fancyNav li.selected:hover:after,
+.fancyNav li:target:hover:after{
+	opacity:5;
+    
+}
+
+/* Styling the anchor elements */
+
+.fancyNav li a:link{
+	color: #fff;
+	display: inline-block;
+	font-family:'Trebuchet MS';
+    font-size:13px;
+    padding-left:20px;
+    padding-top:15px;
+    padding-right:20px;
+    padding-bottom:15px;
+	position: relative;
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+    opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   
+}
+.fancyNav li a:hover{
+	color: #fff;
+	display: inline-block;
+	font-family:'Trebuchet MS';
+    font-size:13px;
+    padding-left:20px;
+    padding-top:15px;
+    padding-right:20px;
+    padding-bottom:15px;
+	position: relative;
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+     opacity: 0.5;
+   
+}
+.fancyNav li a:visited{
+	color: #fff;
+	display: inline-block;
+	font-family:'Trebuchet MS';
+    font-size:13px;
+    padding-left:20px;
+    padding-top:15px;
+    padding-right:20px;
+    padding-bottom:15px;
+	position: relative;
+	z-index:2;
+	text-decoration:none !important;
+	white-space:nowrap;
+    opacity: 1;
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+   
+}
+
+
+.fancyNav a.homeIcon{
+	background:url('../img/home.png') no-repeat center center;
+	display: block;
+	overflow: hidden;
+	padding-left: 15px;
+	padding-right: 30px;
+	text-indent: -9999px;
+	width: 16px;
+}
+

@@ -1,0 +1,48 @@
+﻿<%@ Master Language="VB" CodeFile="cabecera.master.vb" Inherits="cabecera" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Teatro Municipal de Valparaíso</title>
+    <link href="~/css/estilo-general.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+  <div class="filete"></div>
+        <div class="contenedorlogos">
+            <div class="logoteatro">
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/img/logo-teatro-municipal-de-valparaiso.png" />
+            </div>
+            <div class="logomuni">
+                <asp:Image ID="Image2" runat="server" ImageUrl="~/img/logo-municipalidad-de-valparaiso.png" />
+            </div>
+
+        </div>
+        <div class="menu">
+            <ul class="fancyNav">
+                <li id="home"><asp:LinkButton runat="server" ID="lbhome" CssClass="homeIcon" CausesValidation="false"></asp:LinkButton></li>
+                <li id="news"><asp:LinkButton runat="server" ID="lbsalir" CausesValidation="false">SALIR</asp:LinkButton></li>
+           
+            </ul>
+            
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+           
+        </asp:ContentPlaceHolder>
+        <div class="footer">
+            <div class="logopie">
+                <asp:Image ID="Image8" runat="server" ImageUrl="~/img/logo-pie.png" />
+            </div>
+           
+              <div class="creditos">Sitio desarrollado por el Departamento de Tecnológia y las Comunicaciones 2014| Ilustre Municipalidad de Valparaíso</div>
+            </div>
+      
+    </form>
+</body>
+</html>
